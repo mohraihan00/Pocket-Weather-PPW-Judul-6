@@ -1,9 +1,9 @@
 window.app = {
     state: {
-        city: 'Bandar Lampung', // Default city
+        city: 'Bandar Lampung',
         lat: -5.4254,
         lon: 105.2580,
-        unit: 'celsius', // 'celsius' or 'fahrenheit'
+        unit: 'celsius',
         theme: 'light',
         favorites: JSON.parse(localStorage.getItem('pocketWeatherFavorites')) || []
     },
@@ -15,7 +15,6 @@ window.app = {
         this.renderFavorites();
         this.fetchWeather();
         
-        // Auto-refresh every 5 minutes
         setInterval(() => this.fetchWeather(), 300000);
     },
 
@@ -49,7 +48,6 @@ window.app = {
             this.handleAutocomplete(e.target.value);
         });
         
-        // Close autocomplete when clicking outside
         document.addEventListener('click', (e) => {
             if (!this.dom.citySearch.contains(e.target)) {
                 this.dom.searchResults.classList.add('hidden');
@@ -116,7 +114,6 @@ window.app = {
 
         this.dom.searchResults.classList.remove('hidden');
 
-        // Add click listeners to items
         this.dom.searchResults.querySelectorAll('div').forEach(item => {
             item.addEventListener('click', () => {
                 const city = {
@@ -195,7 +192,6 @@ window.app = {
     },
 
     getWeatherInfo(code) {
-        // WMO Weather interpretation codes (WW)
         const codes = {
             0: { desc: 'Clear sky', icon: 'fa-sun' },
             1: { desc: 'Mainly clear', icon: 'fa-cloud-sun' },
@@ -238,10 +234,9 @@ window.app = {
     },
 
     addToFavorites(city) {
-        // Check if already exists
         if (!this.state.favorites.some(f => f.name === city.name)) {
             this.state.favorites.unshift(city);
-            if (this.state.favorites.length > 5) this.state.favorites.pop(); // Keep max 5
+            if (this.state.favorites.length > 5) this.state.favorites.pop();
             localStorage.setItem('pocketWeatherFavorites', JSON.stringify(this.state.favorites));
             this.renderFavorites();
         }
@@ -271,5 +266,4 @@ window.app = {
     }
 };
 
-// Initialize
 document.addEventListener('DOMContentLoaded', () => app.init());

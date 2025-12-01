@@ -33,10 +33,8 @@
 </head>
 <body class="bg-blossom-beige dark:bg-slate-900 text-blossom-dark dark:text-blossom-white transition-colors duration-300 min-h-screen font-sans">
 
-    <!-- Main Container -->
     <div class="container mx-auto px-4 py-8 max-w-6xl">
         
-        <!-- Header -->
         <header class="flex justify-between items-center mb-8">
             <div class="flex items-center gap-3">
                 <i class="fa-solid fa-cloud-sun text-4xl text-blossom-blue"></i>
@@ -52,40 +50,30 @@
             </div>
         </header>
 
-        <!-- Search & Layout Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
             
-            <!-- Sidebar / Search -->
             <div class="lg:col-span-4 space-y-6">
-                <!-- Search Box -->
                 <div class="relative">
                     <input type="text" id="citySearch" placeholder="Search city..." 
                         class="w-full px-4 py-3 rounded-xl bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border-2 border-transparent focus:border-blossom-blue outline-none transition shadow-sm">
                     <button id="searchBtn" class="absolute right-2 top-2 p-2 text-blossom-blue hover:text-blossom-dark">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
-                    <!-- Autocomplete Dropdown -->
                     <div id="searchResults" class="absolute top-full left-0 w-full mt-2 bg-white dark:bg-slate-800 rounded-xl shadow-lg z-50 hidden overflow-hidden">
-                        <!-- Results injected here -->
                     </div>
                 </div>
 
-                <!-- Favorites -->
                 <div class="bg-white/40 dark:bg-slate-800/40 backdrop-blur-md rounded-2xl p-6 shadow-sm">
                     <h3 class="font-display text-xl mb-4 text-blossom-blue">Favorites</h3>
                     <ul id="favoritesList" class="space-y-2">
-                        <!-- Favorite items injected here -->
                         <li class="text-sm opacity-60 italic">No favorites yet.</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Main Content -->
             <div class="lg:col-span-8 space-y-8">
                 
-                <!-- Current Weather Card -->
                 <div id="currentWeather" class="bg-blossom-blue text-blossom-white rounded-3xl p-8 shadow-lg relative overflow-hidden min-h-[300px] flex flex-col justify-between">
-                    <!-- Loading State -->
                     <div class="loading absolute inset-0 flex items-center justify-center bg-blossom-blue z-10 hidden">
                         <i class="fa-solid fa-circle-notch fa-spin text-4xl"></i>
                     </div>
@@ -127,12 +115,9 @@
                     </div>
                 </div>
 
-                <!-- 5 Day Forecast -->
                 <div>
                     <h3 class="font-display text-2xl text-blossom-blue mb-4">5-Day Forecast</h3>
                     <div id="forecastGrid" class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                        <!-- Forecast Cards injected here -->
-                        <!-- Skeleton Loader -->
                         <div class="bg-white/50 h-40 rounded-xl animate-pulse"></div>
                         <div class="bg-white/50 h-40 rounded-xl animate-pulse"></div>
                         <div class="bg-white/50 h-40 rounded-xl animate-pulse"></div>
