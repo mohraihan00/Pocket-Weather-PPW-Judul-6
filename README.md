@@ -15,7 +15,6 @@ Website cuaca responsif dengan tema "Blossom" yang menampilkan cuaca real-time d
 
 ## Cara Menjalankan (Lokal)
 
-Pastikan **PHP** sudah terinstall di komputer Anda.
 
 1. **Buka terminal** (CMD/PowerShell) di dalam folder project ini.
 2. **Jalankan perintah**:
@@ -24,3 +23,8 @@ Pastikan **PHP** sudah terinstall di komputer Anda.
    ```
 3. **Buka browser** dan akses:
    [http://localhost:8000](http://localhost:8000)
+
+
+   ## Tampilan Website
+   <img width="1660" height="969" alt="image" src="https://github.com/user-attachments/assets/e4d7bcbc-f42d-45e2-a07d-a85381a3212e" />
+
