@@ -1,6 +1,6 @@
 # Pocket Weather Dashboard
 
-Website cuaca responsif dengan tema "Blossom" yang menampilkan cuaca real-time dan prediksi 5 hari ke depan menggunakan Open-Meteo API (Gratis & Tanpa API Key).
+Website cuaca yang menampilkan cuaca real-time dan prediksi 5 hari ke depan menggunakan Open-Meteo API.
 
 ## Fitur Utama
 - **Info Cuaca**: Suhu, kelembaban, kecepatan angin, dan forecast 5 hari.
